@@ -10,6 +10,7 @@ const Post = ({ post, onAvatarClick }) => {
   const [showComments, setShowComments] = useState(false);
 
   const toggleComments = () => {
+    console.log('toggleComments called');
     setShowComments(!showComments);
   };
 
@@ -25,18 +26,18 @@ const Post = ({ post, onAvatarClick }) => {
       {showComments && (
         <ListGroup className="list-group-flush">
           {post.comments && post.comments.map((comment) => (
-  <Comment key={comment.id} comment={comment} />
-))}
-
+            <Comment key={comment.id} comment={comment} />
+          ))}
         </ListGroup>
       )}
       <Card.Footer>
-  <small className="text-muted" onClick={() => onAvatarClick && onAvatarClick(post.userId)}>
-    Автор поста
-  </small>
-</Card.Footer>
+      <small className="text-muted" onClick={() => onAvatarClick && onAvatarClick(post.userId)}>
+  Автор поста
+</small>
+      </Card.Footer>
     </Card>
   );
 };
 
 export default Post;
+

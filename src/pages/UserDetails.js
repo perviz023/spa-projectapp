@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser, fetchUserPostsByUser } from '../store/actions/userActions';
-import { selectUser, selectUserPosts } from '../selectors/userSelectors';
+import { selectUser, selectUserPosts } from '../store/selectors/userSelectors';
 import UserCard from '../components/UserCard';
 import Loader from '../components/Loader';
 

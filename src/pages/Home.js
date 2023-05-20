@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../store/actions/postsActions';
-import { selectAllPosts } from '../selectors/postsSelectors';
+import { selectAllPosts } from '../store/selectors/postsSelectors';
 import Post from '../components/Post';
 import Loader from '../components/Loader';
 
