@@ -2,14 +2,14 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosts } from '../actions/postsActions';
+import { fetchPosts } from '../store/actions/postsActions';
 import { selectAllPosts } from '../selectors/postsSelectors';
 import Post from '../components/Post';
 import Loader from '../components/Loader';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const posts = useSelector(selectAllPosts);
+  const {posts} = useSelector(selectAllPosts);
   console.log("Posts:", posts);
   const loading = useSelector((state) => state.posts && state.posts.loading);
 

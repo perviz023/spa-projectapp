@@ -1,7 +1,7 @@
 import { takeLatest, call, put } from 'redux-saga/effects';
-import { fetchPostsSuccess, fetchPostsFailure, } from './actions/postsActions';
-import { fetchUserSuccess, fetchUserFailure, fetchUserPostsSuccess, fetchUserPostsFailure } from './actions/userActions';
-import { fetchPosts, fetchUser, fetchUserPosts } from './api';
+import { fetchPostsSuccess, fetchPostsFailure, } from '../actions/postsActions';
+import { fetchUserSuccess, fetchUserFailure, fetchUserPostsSuccess, fetchUserPostsFailure } from '../actions/userActions';
+import { fetchPosts, fetchUser, fetchUserPosts } from '../../network/api';
 
 // Генератор для выполнения асинхронного запроса на получение постов
 function* fetchPostsSaga() {

@@ -6,19 +6,19 @@ const initialState = {
 
 const postsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'POSTS/FETCH_POSTS_REQUEST':
+    case 'FETCH_POSTS_REQUEST':
       return {
         ...state,
         loading: true,
         error: null,
       };
-    case 'POSTS/FETCH_POSTS_SUCCESS':
+    case 'FETCH_POSTS_SUCCESS':
       return {
         ...state,
         loading: false,
         posts: action.payload,
       };
-    case 'POSTS/FETCH_POSTS_FAILURE':
+    case 'FETCH_POSTS_FAILURE':
       return {
         ...state,
         loading: false,
